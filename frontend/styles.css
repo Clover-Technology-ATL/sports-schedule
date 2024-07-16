@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  h2 {
+    color: #666;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #teams li {
+    background-color: #e1f1ff;
+  }
+  
+  #players li {
+    background-color: #fff1e1;
+  }
+  
+  #games li {
+    background-color: #e1ffe1;
+  }
+  
+  #tournaments li {
+    background-color: #ffe1f1;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+    
+    li {
+      padding: 8px;
+    }
+  }
