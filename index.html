@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sports Team Management</title>
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    header {
+      background-color: #1e88e5;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      color: #1e88e5;
+    }
+    .team-list, .player-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .team-item, .player-item {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .schedule-table th, .schedule-table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .schedule-table th {
+      background-color: #1e88e5;
+      color: #fff;
+    }
+    .button {
+      background-color: #1e88e5;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sports Team Management</h1>
+    <nav>
+      <ul>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#players">Players</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#tournament">Tournament</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section" id="teams">
+      <h2>Teams</h2>
+      <ul class="team-list">
+        <li class="team-item">Team 1</li>
+        <li class="team-item">Team 2</li>
+        <li class="team-item">Team 3</li>
+      </ul>
+      <button class="button" onclick="addTeam()">Add Team</button>
+    </div>
+
+    <div class="section" id="players">
+      <h2>Players</h2>
+      <ul class="player-list">
+        <li class="player-item">Player 1</li>
+        <li class="player-item">Player 2</li>
+        <li class="player-item">Player 3</li>
+      </ul>
+      <button class="button" onclick="addPlayer()">Add Player</button>
+    </div>
+
+    <div class="section" id="schedule">
+      <h2>Schedule</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Opponent</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023-07-01</td>
+            <td>14:00</td>
+            <td>Team A</td>
+            <td>Home</td>
+          </tr>
+          <tr>
+            <td>2023-07-08</td>
+            <td>16:00</td>
+            <td>Team B</td>
+            <td>Away</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="button" onclick="addGame()">Add Game</button>
+    </div>
+
+    <div class="section" id="tournament">
+      <h2>Tournament Bracket</h2>
+      <!-- Add tournament bracket generator code here -->
+    </div>
+  </main>
+
+  <script>
+    // JavaScript code goes here
+    function addTeam() {
+      const teamName = prompt("Enter team name:");
+      if (teamName) {
+        const teamList = document.querySelector(".team-list");
+        const teamItem = document.createElement("li");
+        teamItem.classList.add("team-item");
+        teamItem.textContent = teamName;
+        teamList.appendChild(teamItem);
+      }
+    }
+
+    function addPlayer() {
+      const playerName = prompt("Enter player name:");
+      if (playerName) {
+        const playerList = document.querySelector(".player-list");
+        const playerItem = document.createElement("li");
+        playerItem.classList.add("player-item");
+        playerItem.textContent = playerName;
+        playerList.appendChild(playerItem);
+      }
+    }
+
+    function addGame() {
+      // Add logic to prompt for game details and add to the schedule table
+      // You can use similar logic as addTeam() and addPlayer() functions
+    }
+  </script>
+</body>
+</html>
